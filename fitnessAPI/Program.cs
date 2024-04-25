@@ -14,7 +14,7 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<UsersContext>(options =>
 {
     // MySQL adatforrás hozzáadása
-    options.UseMySql(builder.Configuration.GetConnectionString("Default"), ServerVersion.AutoDetect(builder.Configuration.GetConnectionString("Default")));
+    options.UseMySql(builder.Configuration.GetConnectionString("Local"), ServerVersion.AutoDetect(builder.Configuration.GetConnectionString("Local")));
 });
 
 var app = builder.Build();
